@@ -1,0 +1,103 @@
+\documentclass[compress]{beamer}
+% Set the theme of the beamer as follows %
+\usetheme{AnnArbor}
+% Themes: 
+% AnnArbor Antibes Bergen Berkeley Malmoe Marburg Frankfurt
+% Berlin Boadilla CambridgeUS Copenhagen Darmstadt Dresden 
+% Goettingen Hannover Ilmenau JuanLesPins Luebeck Madrid Warsaw
+% Montpellier PaloAlto Pittsburgh Rochester Singapore Szeged 
+
+% Set the theme of the beamer as follows %
+
+% Use  this package {lmodern}, if not, you maybe get some 
+% error messages
+\usepackage{lmodern}
+%%%%%% 中文输入需要的宏包 %%%%%
+% 如果需要是中文的beamer，那么可以把下面的宏加进去一个即可
+%\usepackage[UTF8]{ctex}
+\usepackage{xeCJK}
+%%%%%%%%%%%%% Set main font for this beamer %%%%%%%%%%%%%
+\setCJKmainfont{STLiti}
+% 在linux下的终端命令下
+% askuyue@malegbasy:~$ fc-list :lang=zh
+% Yozo Kai : 永中楷体, STKaiTi : 华文楷体, STXingkai : 华文行楷, KaiTi : 楷体,
+% STSong : 华文宋体, Evermore Song : 永中宋体, Yozo FangSong : 永中仿宋,
+% SimHei : 黑体, Yozo Hei : 永中黑体, STXihei : 华文细黑, SimHei : 黑体,
+% STLiti : 华文隶书, LiSu : 隶书,
+%%%%%%%%%%%%% Set main font for this beamer %%%%%%%%%%%%%
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+%%%%%% 中文输入需要的宏包 %%%%%
+%%%%%%%%%%% Math pacakges %%%%%%%%%%%%%%%%%%
+\usepackage{amsmath} 
+% The amsmath has anothe packages of amsbsy、amsopn,
+% amstext and the environments of equation
+% equation*  align  align* gather gather*
+% flalign flalign*   multline   multline*    
+% alignat  alignat*   split
+% likes the package mathenv
+
+\usepackage{amsfonts}
+% The amsfonts has all symbol of math
+\usepackage{bm}
+% the bm has bold mathematian symbols
+
+\usepackage{amsthm}
+% This amsthm provides the environments of proof and 
+% theorem like 
+% \newtheorem{Name of Theorem}{title}[name of count]
+%%%%%%%%%%% Math pacakges %%%%%%%%%%%%%%%%%%
+\numberwithin{equation}{section} % Need the package amsmath
+\makeatletter
+\@addtoreset{equation}{section}
+\makeatother
+%%%%%%%%%%%%%% Here are your packages %%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%% Here are your packages %%%%%%%%%%%%%
+% Set the front pages as follows %
+\title{A Simple Presentation}
+\author{WANG Jun \and 王俊}
+\institute[HIT]{ % show at the left-down of beamer follows authors
+	Department of Mathematica \\[1ex]
+	Harbin Institute of Technology\\[2ex]
+	\textcolor{green}{\texttt{\emph{askuyue@gmail.com}}}
+	}
+\date{ % Add some informations for yourself
+	\url{weibo.com/askuyue}
+	}
+% Setting the front pages as follows %
+% Starting ... 
+\begin{document}
+%%%%%% Front page %%%%%%%%%
+\begin{frame}
+  \titlepage
+\end{frame}
+%%%%%% Content of beamer %%%%%%%%%
+\begin{frame}\transsplitverticalin
+		\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{English Input}
+\begin{frame}
+	\frametitle{Mathematica Environment}
+	Here is the Prime Number Theorem (PNT).
+  \begin{theorem}[PNT]
+  	For any $x \in \mathbf{R}$, we have
+  	\begin{equation}
+	  		\lim_{x\rightarrow \infty}\pi\left( x \right) = \frac{x}{\log\left(x\right)}.
+  	\end{equation}
+  \end{theorem}
+\end{frame}
+
+\section{中文输入}
+\begin{frame}
+	\frametitle{中文的beamer}
+			细雨湿流光，芳草年年与恨长。烟锁凤楼无限事。茫茫，鸾镜鸳衾两断肠。
+			魂梦任悠扬，睡起杨花满绣床。薄悻不来门半掩。斜阳，负你残春泪几。
+\end{frame}
+
+
+
+
+\end{document}
